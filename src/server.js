@@ -76,6 +76,7 @@ connectDB()
     console.error("Database cannot be connected...");
   });
 
+//ingore this code for now
 // app.use("/admin", adminAuth);
 // // app.use("/", userAuth);
 
