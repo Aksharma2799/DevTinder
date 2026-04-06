@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const { use } = require("react");
+const { trim } = require("validator");
 
 //schema
 
@@ -8,6 +9,8 @@ const productSchema = new mongoose.Schema({
   name: {
     type: String,
     require: true,
+    trim: true,
+    minLength: 8,
   },
   price: {
     type: Number,
@@ -16,6 +19,9 @@ const productSchema = new mongoose.Schema({
   description: {
     type: String,
     require: true,
+    trim: true,
+    minLength: 8,
+    maxLength: 50,
   },
   imageUrl: {
     type: String,
